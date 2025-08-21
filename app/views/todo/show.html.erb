@@ -1,0 +1,6 @@
+  <div class="item">
+    <h2><%= @todo.description %></h2>
+    <p><%= @todo.completed %></p>
+    <input type="checkbox" <%= @todo.completed ? "checked": "" %>>
+    <h3><%= @todo.created_at %></h3>
+  </div>

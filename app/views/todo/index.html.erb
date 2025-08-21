@@ -6,8 +6,8 @@
 <% @todos.each do |todo| %>
   <div class="item">
     <h2><%= todo.description %></h2>
-    <p><%= todo.completed %></p>
     <input type="checkbox" <%= todo.completed ? "checked": "" %>>
     <h3><%= todo.created_at %></h3>
+    <%= link_to "Ver ToDO", todo_path(todo.id) %>
   </div>
 <% end %>
