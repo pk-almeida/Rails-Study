@@ -1,0 +1,19 @@
+<h1>
+    Criar ToDo
+</h1>
+
+ <%= form_with model: @todo do |form| %>
+      <div>
+        <%= form.label :description %>
+        <%= form.text_field :description %>
+      </div>
+
+      <div>
+        <%= form.label :completed, "Tarefa Completa?" %>
+        <%= form.check_box :completed %>
+      </div>
+
+      <div>
+        <%= form.submit "Create Post" %>
+      </div>
+    <% end %>
