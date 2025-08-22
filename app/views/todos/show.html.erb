@@ -3,4 +3,5 @@
     <p><%= @todo.completed %></p>
     <input type="checkbox" <%= @todo.completed ? "checked": "" %>>
     <h3><%= @todo.created_at %></h3>
+    <%= link_to "Edit ToDo", edit_todo_path(@todo.id) %>
   </div>
