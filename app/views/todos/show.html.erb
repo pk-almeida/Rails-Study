@@ -4,4 +4,6 @@
     <input type="checkbox" <%= @todo.completed ? "checked": "" %>>
     <h3><%= @todo.created_at %></h3>
     <%= link_to "Edit ToDo", edit_todo_path(@todo.id) %>
+    <%= button_to "Delete ToDo", destroy_todo_path(@todo.id), method: :delete %>
+    <%= link_to "Voltar", todos_path %>
   </div>
