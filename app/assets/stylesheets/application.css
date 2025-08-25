@@ -8,3 +8,16 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+html{background-color: gray;}
+#teste{
+    padding: 5px 10px 100px 40px;
+    border-radius: 8px;
+    border: 0;
+    /* padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px; */
+}
+#teste:hover{
+    background-color: red;
+}

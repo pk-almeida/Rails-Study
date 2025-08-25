@@ -1,6 +1,7 @@
 class TodosController < ApplicationController
+
     def index
-        @todos = Todo.all
+        @todos = current_user.todos
     end
 
     def new
@@ -8,7 +9,7 @@ class TodosController < ApplicationController
     end
 
     def create
-        @todo = Todo.create(todo_params)
+        @todo = current_user.todos.build(todo_params)
         if @todo.save
             redirect_to todos_path
         else 
@@ -34,10 +35,9 @@ class TodosController < ApplicationController
     end
 
     def destroy
-        todo = Todo.find(params[:id])
+        todo = current_user.todos.find(params[:id])
         todo.destroy
         redirect_to todos_path
-
     end
 
 

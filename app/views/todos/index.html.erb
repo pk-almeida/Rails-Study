@@ -11,3 +11,6 @@
     <%= link_to "Ver ToDO", todo_path(todo.id) %>
   </div>
 <% end %>
+
+
+<%= button_to "Log out", destroy_session_path, method: :delete %>
