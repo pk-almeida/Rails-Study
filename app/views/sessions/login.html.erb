@@ -1,9 +1,24 @@
-<div>
-    <h2>Iniciar Sessão</h2>
-    <%= form_tag '/login' do %>
-        Username: <%= text_field_tag :username %><br>
-        Senha: <%= password_field_tag :password %><br>
-        <%= submit_tag "Fazer login" %>
-    <% end %>
-    <p>Não possui uma conta? <%= link_to "Cadastre-se agora!", users_new_path %></p>
+<div id="box">
+    
+    <div class="item" id="Titulo">
+        <h2>Iniciar Sessão</h2>
+    </div class="item" >
+    
+    <div id="Autenticacao">
+        <%= form_tag '/login' do %>
+            <div class="item">
+                <label for="username">Usuário:</label>
+                <%= text_field_tag :username %>
+            </div>
+            <div class="item">
+                Senha: <%= password_field_tag :password %><br>
+            </div>
+            <div class="item">
+                <%= submit_tag "Fazer login" %>
+            </div>
+        <% end %>
+    </div>
+    <div id="Rodape">
+        <a>Não possui uma conta? <%= link_to " Cadastre-se agora!", users_new_path %></a>
+    </div>
 </div>
