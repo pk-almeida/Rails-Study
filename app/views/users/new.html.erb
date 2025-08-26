@@ -1,11 +1,33 @@
-<h1>Novo Usuário</h1>
+<div class="box">
+  <div id="NovoUsuario" class"item">
+    <h2>Novo Usuário</h2>
+  </div>
 
-<%= form_for @user do |f| %>
-  <%= f.label :Username %>
-  <%= f.text_field :username %><br>
+  <div id="Autenticacao">
+    <%= form_for @user do |f| %>
+      <div class="item">
+        <%= f.label :username, "Usuário" %>
+        <%= f.text_field :username %>
+      </div>
 
-  <%= f.label :Senha %>
-  <%= f.password_field :password %><br>
+      <div class="item">
+        <%= f.label :password, "Senha" %>
+        <%= f.password_field :password %>
+      </div>
 
-  <%= f.submit "Criar conta" %>
-<% end %>
+      <div class="item">
+        <%= f.label :password_confirmation, "Confirmar Senha" %>
+        <%= f.password_field :password_confirmation %>
+      </div>
+
+      <div class="item">
+        <%= f.submit "Criar conta" %>
+      </div>
+    <% end %>
+  </div>
+
+    <div id="Rodape">
+      <a>Já possui uma conta? <%= link_to "Fazer login", root_path %></a>
+    </div>
+  </div>
+</div>

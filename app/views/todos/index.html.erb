@@ -1,16 +1,42 @@
-<h1>
-    Meus todos
-</h1>
-<%= link_to "Criar ToDo", todos_new_path %>
+<div id="MenuBackground">
 
-<% @todos.each do |todo| %>
-  <div class="item">
-    <h2><%= todo.description %></h2>
-    <input type="checkbox" <%= todo.completed ? "checked": "" %>>
-    <h3><%= todo.created_at %></h3>
-    <%= link_to "Ver ToDO", todo_path(todo.id) %>
+  <div id="Top">
+    <div id="MTD">
+      <h1>
+          Meus To Dos
+      </h1>
+    </div>
+    <div id="CTD">
+      <%= link_to "Criar To Do", todos_new_path %>
+    </div>
   </div>
-<% end %>
 
+  <div id="Mid">
+      <% @todos.each do |todo| %>
+        <div id="ToDo">
+          <div id="Barra"></div>
+          <div id="Texto">
+            <div id="Conteudo">
+              <%= link_to todo_path(todo.id) do %>
+                <h3><%= todo.description %></h3>
+              <% end %>
+            </div>
+          </div>
+          <div id="Verificacao">
+            <div id="VerificacaoBox">
+              <input type="checkbox" <%= todo.completed ? "checked": "" %>>
+              <span>
+                <%= todo.completed ? "Tarefa Concluída" : "Tarefa Não Concluída" %>
+              </span>
+            </div>
+          </div>
+        </div>
+      <% end %>
+  </div>
 
-<%= button_to "Log out", destroy_session_path, method: :delete %>
+  <div id="Bot">
+    <div id="Logout">
+      <%= button_to "Desconectar", destroy_session_path, method: :delete %>
+    </div>
+  </div>
+</div>
