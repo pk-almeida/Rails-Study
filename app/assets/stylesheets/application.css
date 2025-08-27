@@ -22,19 +22,6 @@ body {
   background-repeat: no-repeat;
 }
 
-#teste{
-    padding: 5px 10px 100px 40px;
-    border-radius: 8px;
-    border: 0;
-    /* padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px; */
-}
-#teste:hover{
-    background-color: red;
-}
-
 .box{
     background-color: rgba(0, 0, 0, 0.699);
     height: 600px;
@@ -231,7 +218,7 @@ body {
     width: 240px;
     height: 280px;
     border-radius: 20px;
-    border: 2px solid rgba(255, 255, 255, 0.801);
+    border: 3px solid rgba(255, 255, 255, 0.801);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -256,6 +243,7 @@ body {
 
 #Texto h3{
     margin: 0;
+    color: white;
 }
 
 #Texto a{
@@ -322,3 +310,220 @@ body {
     color: white;
 }
 
+#CTDBackground{
+    background-color: rgba(0,0,0,0.55);
+    width: 700px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    display:flex;
+}
+
+#MenuCTD{
+    height: 300px;
+    width: 360px;
+    margin-left: 30px;
+}
+
+#TituloCTD{
+    margin-top: auto;
+    height: 40px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    color: white;
+}
+
+#TituloCTD h1{
+    margin: 0;
+}
+
+#CorpoForm{
+    margin-bottom: auto;
+    display: flex;
+    height: 260px;
+    width: 360px;
+}
+
+#Desc{
+    margin: 10px;
+    font-size: 22px;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: white;
+}
+
+#DescTxt{
+    padding: 4px;
+    margin: 10px;
+    margin-top: 2px;
+    width: 330px;
+    height: 100px;
+}
+
+#DescTxt textarea{
+    width: 97%;
+    height: 94%;
+    font-size: 16px;
+    background-color: none;
+    resize: none;
+    background-color: rgba(0, 0, 0, 0.068);
+    border: 3px solid;
+    border-radius: 4px;
+    color: white;
+    border-color: white;
+}
+
+#TarefaConcl{
+    height: 45px;
+    display: flex;
+    align-items: center;
+    width: 200px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
+}
+
+#CriarTD{
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 360px;
+}
+
+
+#CriarTD input{
+    background-color: #4CAF50;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    width: 150px;
+}
+
+#CriarTD input:hover{
+    border: white 2px solid;
+    box-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
+
+#MenuSHOW{
+    height: 300px;
+    width: 360px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#EditToDo{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 250px;
+    height: 45px;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+#EditToDo:hover{
+    background-color: orange;
+    box-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
+
+#EditToDo a{
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    height: 45px;
+}
+
+#EditToDo a:hover{
+    color: white;
+}
+
+#DeleteToDo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 250px;
+    height: 45px;
+    border-radius: 12px;
+}
+
+#DeleteToDo:hover{
+    background-color: red;
+    box-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
+
+#DeleteToDo form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 45px;
+}
+
+#DeleteToDo button{
+    background-color: transparent;
+    border: 0;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 45px;
+}
+
+#DeleteToDo button:hover{
+    color: white;
+    cursor: pointer;
+}
+
+#VoltarMenu{
+    display: flex;
+    justify-content: center;
+    background-color: #45a049;
+    width: 250px;
+    height: 45px;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+
+#VoltarMenu a{
+    text-decoration: none;
+    color: black;
+    width: 250px;
+    height: 45px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#VoltarMenu a:hover{
+    color: white;
+}
+
+#VoltarMenu:hover{
+    background-color: red;
+    box-shadow: 0 0 8px rgba(0,0,0,0.4);
+}

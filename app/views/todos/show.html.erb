@@ -1,9 +1,29 @@
-  <div class="item">
-    <h2><%= @todo.description %></h2>
-    <p><%= @todo.completed %></p>
-    <input type="checkbox" <%= @todo.completed ? "checked": "" %>>
-    <h3><%= @todo.created_at %></h3>
-    <%= link_to "Edit ToDo", edit_todo_path(@todo.id) %>
-    <%= button_to "Delete ToDo", destroy_todo_path(@todo.id), method: :delete, id: "teste"%>
-    <%= link_to "Voltar", todos_path %>
+<div id="CTDBackground">
+  <div id="ToDo">
+    <div id="Barra"></div>
+    <div id="Texto">
+      <div id="Conteudo">
+        <h3><%= @todo.description %></h3>
+      </div>
+    </div>
+    <div id="Verificacao">
+      <div id="VerificacaoBox">
+        <input type="checkbox" <%= @todo.completed ? "checked": "" %>>
+        <span>
+          <%= @todo.completed ? "Tarefa Concluída" : "Tarefa Não Concluída" %>
+        </span>
+      </div>
+    </div>
   </div>
+  <div id="MenuSHOW">
+    <div id="EditToDo">
+        <%= link_to "Edit To Do", edit_todo_path(@todo.id) %>
+    </div>
+    <div id="DeleteToDo">
+        <%= button_to "Delete To Do", destroy_todo_path(@todo.id), method: :delete%>
+    </div>
+    <div id="VoltarMenu">
+        <%= link_to "Voltar", todos_path %>
+    </div>
+  </div>
+</div>
