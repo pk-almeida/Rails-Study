@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get "/todos/new", to: "todos#new"
   post "/todos", to: "todos#create"
   get "/todos/:id", to: "todos#show", as: "todo"
-  patch "/todos/:id", to: "todos#update"
+  patch "/todos/:id", to: "todos#update", as: "update_todo"
   get "/todos/edit/:id", to: "todos#edit", as: "edit_todo"
   delete "/todos/:id", to: "todos#destroy", as: "destroy_todo"
   # resources :todos

@@ -1,18 +1,27 @@
-  <div class="item">
 
- <%= form_with model: @todo do |form| %>
-      <div>
-        <%= form.label :description %>
-        <%= form.text_field :description, value: @todo.description %>
-      </div>
-
-      <div>
-        <%= form.label :completed, "Tarefa Completa?" %>
-        <%= form.check_box :completed, value: @todo.completed %>
-      </div>
-
-      <div>
-        <%= form.submit "Update Post" %>
-      </div>
-  <% end %>
+<div id="CTDBackground">
+  <div id="ToDo">
+    <div id="Barra"></div>
+    <div id="Texto"></div>
+    <div id="Verificacao"></div>
   </div>
+  <div id="MenuCTD">
+    <div id="TituloCTD"><h1>Editar To Do</h1></div>
+    <div id="CorpoForm">
+      <%= form_with model: @todo do |form| %>
+          <div id="Desc"><%= form.label :description, "Descrição:" %></div>
+          <div id="DescTxt"><%= form.text_area :description, value: @todo.description %></div>
+          <div id="TarefaConcl"><%= form.label :completed, "Tarefa Completa?" %><%= form.check_box :completed, value: @todo.completed %></div>
+          <div id="CriarTD"><%= form.submit "Editar To Do" %></div>
+
+          <div class="field">
+            <% if @todo.errors[:description].any? %>
+              <div class="error-message">
+                <%= @todo.errors[:description].join(", ") %>
+              </div>
+            <% end %>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>
