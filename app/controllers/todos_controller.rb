@@ -1,15 +1,16 @@
 class TodosController < ApplicationController
-
+    before_action :authenticate_user!
+    
     def index
-        @todos = current_user.todos
+        @todos = current_user.todos.order(created_at: :desc)
     end
 
     def new
-        @todo = Todo.new
+        @todo = current_user.todos.new
     end
 
     def create
-        @todo = current_user.todos.build(todo_params)
+        @todo = current_user.todos.new(todo_params)
         if @todo.save
             redirect_to todos_path
         else 
@@ -25,6 +26,7 @@ class TodosController < ApplicationController
     def update
         @todo = Todo.find(params[:id])
         @todo.update(todo_params)
+        redirect_to todos_path
         # @todo.description = todo_params[:description]
         # @todo.completed = todo_params[:completed]
         # @todo.save
