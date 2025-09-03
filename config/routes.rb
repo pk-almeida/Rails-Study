@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -6,7 +7,7 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
 
-  root "sessions#login"  
+  root "todos#index"  
         # (antes do tutorial eu tinha colocado root "todos#loginmenu" e tinha funcionado)
   get "/todos", to: "todos#index"
   get "/todos/new", to: "todos#new"
@@ -17,17 +18,18 @@ Rails.application.routes.draw do
   delete "/todos/:id", to: "todos#destroy", as: "destroy_todo"
   # resources :todos
 
-  get "/users/new", to: "users#new"
-  post "/users", to: "users#create"
+  # devise_for :users
+  # get "/users/new", to: "users#new"
+  # post "/users", to: "users#create"
   # resources :user, only: [:new, :create, :edit, :update, :show, :destroy]
 
-  get '/login', to: 'sessions#login'
-  post '/login', to: 'sessions#create'
-  post '/logout', to: 'sessions#destroy'
-  get '/logout', to: 'sessions#destroy'
-  delete '/logout', to:'sessions#destroy', as: "destroy_session"
+  # get '/login', to: 'sessions#login'
+  # post '/login', to: 'sessions#create'
+  # post '/logout', to: 'sessions#destroy'
+  # get '/logout', to: 'sessions#destroy'
+  # delete '/logout', to:'sessions#destroy', as: "destroy_session"
 
-
+  # devise_for :users, controllers: { sessions: 'users/sessions' }
 
 
 
